@@ -14,10 +14,7 @@ def get_variance_explained(evals):
   # Cumulatively sum the eigenvalues
   csum = np.cumsum(evals)
 
-  # Normalize by the sum of eigenvalues
-  variance_explained = csum / np.sum(evals)
-
-  return variance_explained
+  return csum / np.sum(evals)
 
 
 # Calculate the variance explained

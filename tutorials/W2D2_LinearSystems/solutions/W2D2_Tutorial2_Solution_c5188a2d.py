@@ -18,7 +18,7 @@ def simulate_prob_prop(A, x0, dt, T):
   x = x0 # x at time t_0
 
   # Step through the system in time
-  for k in range(len(t)-1):
+  for _ in range(len(t)-1):
     # Compute the state of x at time k+1
     x_kp1 = np.dot(A, x[-1,:])
 

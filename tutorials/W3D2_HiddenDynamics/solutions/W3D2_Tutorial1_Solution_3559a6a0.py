@@ -30,11 +30,7 @@ def simulate_SPRT_threshold(mu, sigma, threshold , true_dist=1):
 
   # Keep sampling data until threshold is crossed
   while not has_enough_data:
-    if true_dist == 1:
-      Mvec = pR.rvs()
-    else:
-      Mvec = pL.rvs()
-
+    Mvec = pR.rvs() if true_dist == 1 else pL.rvs()
     # STEP 1: individual log likelihood ratios
     ll_ratio = log_likelihood_ratio(Mvec, pL, pR)
 
@@ -53,11 +49,7 @@ def simulate_SPRT_threshold(mu, sigma, threshold , true_dist=1):
   evidence_history = np.array(evidence_history)
 
   # Make decision
-  if evidence_history[-1] >= 0:
-    decision = 1
-  elif evidence_history[-1] < 0:
-    decision = 0
-
+  decision = 1 if evidence_history[-1] >= 0 else 0
   return evidence_history, decision, data_history
 
 

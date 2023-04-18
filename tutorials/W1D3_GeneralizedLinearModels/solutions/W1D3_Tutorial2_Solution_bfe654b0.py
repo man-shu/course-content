@@ -13,9 +13,7 @@ def compute_accuracy(X, y, model):
 
   y_pred = model.predict(X)
 
-  accuracy = (y == y_pred).mean()
-
-  return accuracy
+  return (y == y_pred).mean()
 
 
 # Compute train accuracy

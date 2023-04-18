@@ -12,8 +12,7 @@ def calculate_prior_array(x_points, stim_array, p_indep,
   prior_mixed = (1 - p_indep) * prior_common + (p_indep * prior_indep)
   prior_mixed /= np.sum(prior_mixed)  # normalize
 
-  prior_array = np.tile(prior_mixed, len(stim_array)).reshape(len(stim_array), -1)
-  return prior_array
+  return np.tile(prior_mixed, len(stim_array)).reshape(len(stim_array), -1)
 
 
 x = np.arange(-10, 10, 0.1)

@@ -18,10 +18,7 @@ def define_orthonormal_basis(u):
   # Calculate vector w that is orthogonal to w
   w = np.array([-u[1], u[0]])
 
-  # Put in matrix form
-  W = np.column_stack([u, w])
-
-  return W
+  return np.column_stack([u, w])
 
 
 # Set up parameters
