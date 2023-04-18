@@ -1,9 +1,7 @@
 def sigmoid(z):
   """Return the logistic transform of z."""
 
-  sigmoid = 1 / (1 + np.exp(-z))
-
-  return sigmoid
+  return 1 / (1 + np.exp(-z))
 
 
 # Visualize

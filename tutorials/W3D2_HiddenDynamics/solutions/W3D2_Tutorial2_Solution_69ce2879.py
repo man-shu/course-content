@@ -11,10 +11,7 @@ def markov_forward(p0, D):
     p1 (numpy vector): the predictive probabilities in next time step
   """
 
-  # Calculate predictive probabilities (prior)
-  p1 = p0 @ D
-
-  return p1
+  return p0 @ D
 
 def one_step_update(model, posterior_tm1, M_t):
   """Given a HMM model, calculate the one-time-step updates to the posterior.

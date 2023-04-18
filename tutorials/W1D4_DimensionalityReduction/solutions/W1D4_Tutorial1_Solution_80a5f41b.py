@@ -13,10 +13,7 @@ def change_of_basis(X, W):
     (numpy array of floats)    : Data matrix expressed in new basis
   """
 
-  # Project data onto new basis described by W
-  Y = X @ W
-
-  return Y
+  return X @ W
 
 
 # Project data to new basis

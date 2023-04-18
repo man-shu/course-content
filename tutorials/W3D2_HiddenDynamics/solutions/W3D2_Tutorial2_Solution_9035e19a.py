@@ -29,16 +29,13 @@ def create_HMM(switch_prob=0.1, noise_level=1e-1, startprob=[1.0, 0.0]):
   # Noise for each state
   vars_vec = np.ones(2) * noise_level * noise_level
 
-  # Initialize model
-  model = GaussianHMM1D(
-    startprob = startprob_vec,
-    transmat = transmat_mat,
-    means = means_vec,
-    vars = vars_vec,
-    n_components = n_components
+  return GaussianHMM1D(
+      startprob=startprob_vec,
+      transmat=transmat_mat,
+      means=means_vec,
+      vars=vars_vec,
+      n_components=n_components,
   )
-
-  return model
 
 
 def sample(model, T):

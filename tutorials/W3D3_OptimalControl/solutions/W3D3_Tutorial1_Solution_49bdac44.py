@@ -11,10 +11,7 @@ def get_value(rewards, actions, cost_sw):
   """
   actions_int = (actions == "switch").astype(int)
 
-  # Calculate the value function
-  value = np.sum(rewards - actions_int * cost_sw) / len(rewards)
-
-  return value
+  return np.sum(rewards - actions_int * cost_sw) / len(rewards)
 
 
 # Test your function

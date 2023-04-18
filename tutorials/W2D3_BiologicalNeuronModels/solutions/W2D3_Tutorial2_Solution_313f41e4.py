@@ -16,10 +16,7 @@ def my_CC(i, j):
   # Calculate the variance of j
   var_j = ((j - j.mean()) * (j - j.mean())).sum()
 
-  # Calculate the correlation coefficient
-  rij = cov / np.sqrt(var_i*var_j)
-
-  return rij
+  return cov / np.sqrt(var_i*var_j)
 
 
 with plt.xkcd():

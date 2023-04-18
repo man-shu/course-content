@@ -30,8 +30,8 @@ def run_LIF(pars, Iinj, stop=False):
 
   # If current pulse, set beginning and end to 0
   if stop:
-    Iinj[:int(len(Iinj) / 2) - 1000] = 0
-    Iinj[int(len(Iinj) / 2) + 1000:] = 0
+    Iinj[:len(Iinj) // 2 - 1000] = 0
+    Iinj[len(Iinj) // 2 + 1000:] = 0
 
   # Loop over time
   rec_spikes = []  # record spike times

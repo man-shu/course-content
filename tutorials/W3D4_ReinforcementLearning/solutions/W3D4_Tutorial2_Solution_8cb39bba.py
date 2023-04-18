@@ -12,17 +12,7 @@ def epsilon_greedy(q, epsilon):
   # write a boolean expression that determines if we should take the best action
   be_greedy = np.random.random() > epsilon
 
-  if be_greedy:
-
-    # write an expression for selecting the best action from the action values
-    action = np.argmax(q)
-
-  else:
-
-    # write an expression for selecting a random action
-    action = np.random.choice(len(q))
-
-  return action
+  return np.argmax(q) if be_greedy else np.random.choice(len(q))
 
 
 # Set parameters

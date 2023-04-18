@@ -19,10 +19,7 @@ def predict_spike_counts_lg(stim, spikes, d=25):
   # Get the MLE weights for the LG model
   theta = np.linalg.inv(X.T @ X) @ X.T @ y
 
-  # Compute predicted spike counts
-  yhat = X @ theta
-
-  return yhat
+  return X @ theta
 
 
 # Predict spike counts

@@ -43,8 +43,7 @@ class ConvFC(nn.Module):
     """
     a = self.conv(s)  # output of convolutional layer
     a = a.view(-1, np.prod(self.dims))  # flatten each convolutional layer output into a vector
-    y = self.out_layer(a)
-    return y
+    return self.out_layer(a)
 
 
 device = torch.device('cpu')

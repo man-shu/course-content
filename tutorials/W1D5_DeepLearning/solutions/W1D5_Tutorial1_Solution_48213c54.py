@@ -10,9 +10,7 @@ class DeepNetReLU(nn.Module):
   def forward(self, r):
 
     h = torch.relu(self.in_layer(r)) # h is size (n_inputs, n_hidden)
-    y = self.out_layer(h) # y is size (n_inputs, 1)
-
-    return y
+    return self.out_layer(h)
 
 
 # Set random seeds for reproducibility
